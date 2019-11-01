@@ -1,0 +1,61 @@
+<div class="container ">
+  <div class=" text-center mt-2 ">
+    <div class="row justify-content-center">
+
+      <h4> เปิดระบบ Beacon </h4>
+    </div>
+
+
+    <div class="row justify-content-center mt-2">
+      <div class="col-4">
+        <label>Start Time</label>
+      </div>
+      <div class="col-4 ">
+        <input type="time" id="timeStart" [(ngModel)]="timeStart" class="form-control">
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-4">
+        <label>End Time</label>
+      </div>
+      <div class="col-4">
+        <input type="time" id="timeStart" [(ngModel)]="timeEnd" class="form-control">
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-2">
+      <div class="col-4">
+        <label>Late (Minute)</label>
+      </div>
+      <div class="col-4">
+        <input type="number" id="timeStart" [(ngModel)]="timeLate" class="form-control">
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-2">
+        <div class="col-3">
+          </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="defaultUnchecked" [(ngModel)]="editStatus"
+          (input)="editStatusChang()">
+        <label class="custom-control-label" for="defaultUnchecked">แก้ไขเวลาล่าสุด</label>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-2">
+      <div class="col-4">
+      </div>
+
+      <div class="col-4 text-right " *ngIf="!editStatus">
+        <button class="btn btn-primary" (click)="sendData()">ยืนยัน</button>
+      </div>
+      <div class="col-4 text-right " *ngIf="editStatus">
+        <button class="btn btn-primary" (click)="sendData()">แก้ไข</button>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

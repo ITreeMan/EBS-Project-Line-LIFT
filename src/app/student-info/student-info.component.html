@@ -1,0 +1,41 @@
+<div class="container">
+    <div class=" text-center mt-2 ">
+      <h4> ข้อมูลนักศึกษาของ {{userProfile.displayName}} </h4>
+      <br>
+      <!-- <div class="d-flex">
+        {{userData | json}}
+      </div> -->
+  
+      <div class="row">
+        <div class="col-4">
+          <label>ชื่อ-นามสกุล</label>
+        </div>
+        <div class="col-8">
+          <input class="form-control" type="text" [(ngModel)]="name">
+        </div>
+      </div>
+  
+      <div class="row mt-2">
+        <div class="col-4">
+          <label>รหัสศึกษา</label>
+        </div>
+        <div class="col-8">
+          <input class="form-control" type="text" [(ngModel)]="studentID">
+        </div>
+      </div>
+  
+  
+      <div class="row mt-2">
+        <div class="col-8">
+        </div>
+        <div class="col-4 text-right " *ngIf="registorStatus">
+          <button class="btn btn-primary" (click)="sendData()">ยืนยัน</button>
+        </div>
+        <div class="col-4 text-right " *ngIf="!registorStatus">
+          <button class="btn btn-primary" (click)="sendData()">แก้ไข</button>
+        </div>
+      </div>
+  
+  
+  
+    </div>
