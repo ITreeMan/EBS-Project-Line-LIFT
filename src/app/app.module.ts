@@ -15,6 +15,7 @@ import { firebaseConfig } from './../environments/firebase.config';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ProfOpenClassComponent } from './prof-open-class/prof-open-class.component';
 import { StudentInfoComponent } from './student-info/student-info.component';
+import { TakeALeaveComponent } from './take-aleave/take-aleave.component';
 
 
 
@@ -23,7 +24,8 @@ import { StudentInfoComponent } from './student-info/student-info.component';
   declarations: [
     AppComponent,
     ProfOpenClassComponent,
-    StudentInfoComponent
+    StudentInfoComponent,
+    TakeALeaveComponent
   ],
   imports: [
     BrowserModule,

@@ -103,8 +103,8 @@ export class ProfOpenClassComponent implements OnInit {
       this.data = this.db.list(`/Date`).valueChanges();
       this.data.subscribe(res => {
         // read result form JSON response
-        console.log("Date>>>" + JSON.stringify(res[this.indexDate - 1]))
-        const curentDate = res[this.indexDate - 1]
+        console.log("Date>>>" + JSON.stringify(res[this.indexDate-1]))
+        const curentDate = res[this.indexDate-1]
         console.log(curentDate.End)
         this.timeEnd = curentDate.End.split(" ")[1]
         console.log(this.timeEnd)
@@ -134,7 +134,7 @@ export class ProfOpenClassComponent implements OnInit {
       this.db.list(`Date/`).set((this.indexDate).toString(), { End: this.endData, start: this.startData, late: this.timeLate });
 
       for (var i = 0; i < this.studentID.length; i++) {
-        this.db.list(`Check/` + this.studentID[i]).set((this.indexDate + 2).toString(), { checkName: 0, Date: this.todayDate.toString() });
+        this.db.list(`Check/` + this.studentID[i]).set((this.indexDate).toString(), { checkName: 0, Date: this.todayDate.toString() });
       }
 
     }
